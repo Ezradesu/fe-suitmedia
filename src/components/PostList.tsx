@@ -132,14 +132,12 @@ export default function PostList() {
 
       {loading && <LoadingSpinner />}
 
-      {/* Card Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
         {posts.map((post) => (
           <PostCard key={post.id} post={post} />
         ))}
       </div>
 
-      {/* Pagination */}
       <Pagination
         currentPage={page}
         totalPages={totalPages}

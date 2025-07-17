@@ -1,10 +1,9 @@
-// components/Banner.tsx
 "use client";
 
 import { useEffect, useState } from "react";
 
 interface BannerProps {
-  imageUrl: string;
+  imageUrl?: string;
   title?: string;
   subtitle?: string;
 }
@@ -33,7 +32,6 @@ export default function Banner({
         }}
       />
 
-      {/* Content */}
       <div className="relative z-10 flex flex-col items-center justify-center h-full text-white text-center px-6">
         <h1 className="text-4xl md:text-6xl font-bold drop-shadow-lg">
           {title}
@@ -41,7 +39,6 @@ export default function Banner({
         <p className="text-xl md:text-2xl mt-4 drop-shadow-md">{subtitle}</p>
       </div>
 
-      {/* Slanted bottom */}
       <div className="absolute bottom-0 left-0 w-full h-[100px] bg-white z-20 clip-slant" />
     </div>
   );
